@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="historico.css">
+    <title>Histórico de Transações</title>
+</head>
+
+<body class="light">
+    <div class="menu">
+        <button id="menu-button" onclick="toggleMenu()">Menu</button>
+    </div>
+
+    <div class="container">
+        <h1>Histórico de Transações</h1>
+
+        <h2>Transações Realizadas</h2>
+        <ul id="historico-transacoes">
+        </ul>
+
+        <button id="limparHistorico" onclick="limparHistorico()">Limpar Histórico</button>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="transaçoes.html"><i class="fas fa-money-bill-wave"></i> Transações</a></li>
+            <li><a href="config.html"><i class="fas fa-cog"></i> Configurações</a></li>
+        </ul>
+    </aside>
+
+    <script src="historico.js"></script>
+</body>
+
+</html>

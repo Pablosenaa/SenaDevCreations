@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="text-section">
+            <h2>Sistema de Gestão Financeira Online</h2>
+            <h3>Descubra a simplicidade e a eficiência na gestão financeira!<br>
+            Nossa plataforma oferece uma solução completa para sua empresa, 
+            garantindo máxima economia, implementação rápida e suporte total.<br>
+            Gerencie seus recursos com facilidade e tenha acesso a relatórios em tempo real, 
+            tudo na nuvem e sem complicações.</h3>
+
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fas fa-calculator"></i>
+                    <h4>Orçamentos Personalizados</h4>
+                    <p>Crie orçamentos personalizados para cada área de sua empresa e receba alertas quando estiver perto de atingir o limite.</p>
+                    <p><strong>Mantenha seus gastos alinhados com as metas financeiras da sua empresa.</strong></p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Controle de Despesas</h4>
+                    <p>Acompanhe todas as suas despesas em tempo real, com gráficos e relatórios completos que ajudam na tomada de decisões financeiras.</p>
+                    <p><strong>Controle total de suas finanças em um só lugar.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="form-section">
+            <h1 id="form-title">Login</h1>
+
+            <div class="toggle-buttons">
+                <button id="loginBtn">Login</button>
+                <button id="registerBtn">Registrar</button>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senhaLogin">Senha</label>
+                    <input type="password" id="senhaLogin" required> <!-- Corrigido aqui -->
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Número de WhatsApp</label>
+                    <input type="number" id="whatsapp" required>
+                </div>
+                <div class="form-group">
+                    <label for="faturamento">Faturamento</label>
+                    <input type="text" id="faturamento" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Concordo com os termos</label>
+                </div>
+                <button type="submit">Entrar</button>
+                <div class="form-footer">
+                    <a href="#">Recuperar Senha</a>
+                </div>
+            </form>
+
+            <form id="registerForm" class="hidden">
+                <div class="form-group">
+                    <label for="nomeRegistro">Nome</label>
+                    <input type="text" id="nomeRegistro" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailRegistro">Email</label>
+                    <input type="email" id="emailRegistro" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsappRegistro">Número de WhatsApp</label>
+                    <input type="number" id="whatsappRegistro" required>
+                </div>
+                <div class="form-group">
+                    <label for="senhaRegistro">Senha</label>
+                    <input type="password" id="senhaRegistro" required>
+                </div>
+                <button type="submit">Registrar</button>
+                <div class="form-footer">
+                    <a href="#">Voltar ao Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

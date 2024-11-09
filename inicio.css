@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Alteração da fonte para uma mais moderna */
+    background: linear-gradient(135deg, #1a1a1a, #4d4d4d, #66ff66); /* Gradiente verde e preto */
+    color: #000000;
+    display: flex;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+body.light {
+    background: linear-gradient(135deg, #d8c6c6, #4d4d4d, #66ff66);
+    color: #000000;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #1a1a1a, #4d4d4d, #66ff66); /* Gradiente verde e preto */
+    color: #ffffff;
+}
+
+header.navbar {
+    background: linear-gradient(135deg, #000000, #363636, #66ff66); 
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header.navbar h1 {
+    font-size: 2rem; /* Aumentei o tamanho da fonte */
+    text-align: center;
+    letter-spacing: 1.5px; /* Adicionei espaçamento entre as letras para um visual mais refinado */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Adicionei um espaçamento entre os itens do menu */
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold; /* Deixei os links em negrito */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+    text-shadow: 0px 2px 10px rgba(76, 175, 80, 0.5); /* Efeito de brilho no hover */
+}
+
+aside.sidebar {
+    background: linear-gradient(135deg, #000000, #303030, #66ff66); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.3); /* Sombra mais escura */
+    overflow: hidden;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+aside.sidebar.active {
+    width: 300px; /* Aumentei a largura da sidebar */
+    opacity: 1;
+}
+
+aside.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 1.8rem; /* Aumentei o tamanho da fonte */
+    text-align: center;
+    text-transform: uppercase; /* Texto em caixa alta para dar destaque */
+    letter-spacing: 1px;
+    border-bottom: 2px solid #66ff66; /* Linha embaixo do título */
+    padding-bottom: 10px;
+}
+
+aside.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside.sidebar ul li {
+    margin: 20px 0;
+}
+
+aside.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem; /* Aumentei o tamanho da fonte */
+    transition: color 0.3s ease;
+}
+
+aside.sidebar ul li a:hover {
+    color: #4CAF50;
+    text-shadow: 0px 2px 10px rgba(76, 175, 80, 0.5); /* Efeito de brilho no hover */
+}
+
+.container {
+    flex: 1;
+    padding: 40px; /* Aumentei o espaçamento interno */
+    margin-left: 300px; /* Alinhei com a sidebar */
+    transition: margin-left 0.5s ease;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 12px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Arredondei um pouco mais as bordas */
+    flex: 1;
+}
+
+#lista-transacoes {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-transacoes li {
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Arredondei um pouco mais as bordas */
+}
+
+#resumo {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.2rem; /* Aumentei o tamanho do resumo */
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Centralizei os cards */
+    margin: 40px 0;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 12px; /* Arredondei mais as bordas */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6); /* Sombra mais intensa */
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8); /* Aumentei o efeito de hover */
+}
+
+.card img {
+    width: 60px; /* Aumentei o tamanho da imagem */
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    font-size: 1.8rem; /* Aumentei o tamanho do título */
+    color: #66ff66; /* Verde */
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 1rem; /* Aumentei o tamanho da descrição */
+    color: #bbb;
+}
+
+.card i {
+    font-size: 60px; /* Aumentei o tamanho do ícone */
+    color: #66ff66; /* Verde */
+    margin-bottom: 20px;
+}
+
+/* Estilos do button permanecem como estavam */
+
+button {
+    padding: 10px;
+    background: linear-gradient(135deg, #66ff66, #4d4d4d, #011101); /* Gradiente verde e preto */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #011101, #302f2f, #66ff66);
+    color: #fff;
+}

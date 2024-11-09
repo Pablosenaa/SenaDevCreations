@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu {
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+}
+
+.menu nav ul {
+    display: flex; 
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.menu nav ul li {
+    margin-left: 20px; 
+}
+
+.menu nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu nav ul li a:hover {
+    color: #4CAF50;
+}
+
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h1 {
+    background-image: url('path_to_your_image.jpg');
+    background-size: cover;
+    color: #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border-left: 5px solid #4CAF50;
+    border-radius: 8px;
+}
+
+li span {
+    font-weight: bold;
+    display: block;
+}
+
+
+#resumo p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#resumo p span {
+    font-weight: bold;
+}
+
+aside.sidebar {
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+aside.sidebar.active {
+    width: 250px;
+    opacity: 1;
+}
+
+aside.sidebar h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+aside.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside.sidebar ul li {
+    margin: 15px 0;
+}
+
+aside.sidebar ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+aside.sidebar ul li a:hover {
+    color: #4CAF50;
+}
+
+.receita {
+    color: green; /* Cor verde para receitas */
+}
+
+.despesa {
+    color: red; /* Cor vermelha para despesas */
+}
+
+
+
+#limparHistorico {
+    background-color: #f44336;
+    margin-top: 20px;
+}
+
+#limparHistorico:hover {
+    background-color: #e53935;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar ul li a {
+        font-size: 1rem;
+    }
+}

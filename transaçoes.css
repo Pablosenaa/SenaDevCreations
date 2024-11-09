@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+aside.sidebar {
+    background-color: #000000; 
+    color: #ffffff;
+    width: 250px; 
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    padding: 20px; 
+    overflow-y: auto; 
+}
+
+aside.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+aside.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+aside.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+aside.sidebar ul li a:hover {
+    background-color: #495057; 
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 12px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #28a745; 
+}
+#btn-apagar{
+    background-color:#dc3545;
+    color: white;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05); 
+}
+
+#transaction-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#summary {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem; 
+}
+
+/* Temas */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark {
+    background-color: #121212; 
+    color: #ffffff;
+}
+
+body.dark .container {
+    background-color: #1e1e1e; 
+}
+
+body.dark aside.sidebar {
+    background-color: #1e1e1e; 
+    color: #ffffff;
+}
+
+body.dark aside.sidebar ul li a {
+    color: #ffffff; 
+}
+
+body.dark .form-group input,
+body.dark .form-group select {
+    background-color: #343a40; 
+    color: #ffffff;
+    border: 1px solid #444; 
+}
+
+body.dark .form-group input:focus,
+body.dark .form-group select:focus {
+    border-color: #28a745; 
+}
+
+div.theme-switch {
+    margin-bottom: 50px;
+}
